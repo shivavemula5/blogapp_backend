@@ -30,7 +30,9 @@ STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
  
 ALLOWED_HOSTS = ['127.0.0.1','blogapp-backend.herokuapp.com','blogapp-3f83.onrender.com']
 
-CORS_ORIGIN_WHITELIST = ['https://blogapp-3f83.onrender.com']
+CORS_ORIGIN_ALLOW_ALL = True
+
+# CORS_ORIGIN_WHITELIST = ['https://blogapp-3f83.onrender.com']
 
 INTERNAL_IPS = [
     '127.0.0.1',
@@ -138,7 +140,6 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -167,8 +168,6 @@ EMAIL_USE_TLS = True
 #               'HOST'     : 'localhost', 
 #        } 
 #   }
-
-
 
 DOMAIN = 'blogapp-3f83.onrender.com'
 
