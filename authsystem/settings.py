@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG') == 'False'
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
  
-ALLOWED_HOSTS = ['127.0.0.1','blogapp-backend.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','blogapp-backend.herokuapp.com','https://blogapp-3f83.onrender.com']
 
 CORS_ORIGIN_WHITELIST = ['https://blogapp-3f83.onrender.com']
 
