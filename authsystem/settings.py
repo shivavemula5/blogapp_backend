@@ -137,7 +137,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
-DISABLE_COLLECTSTATIC=1
 
 
 # Default primary key field type
@@ -211,7 +210,7 @@ REST_FRAMEWORK = {
 #Stripe Configurations
 
 # Heroku Postgresql Configuration
-db_from_env = dj_database.url.config(conn_max_age=600)
+db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
 
 django_heroku.settings(locals())
