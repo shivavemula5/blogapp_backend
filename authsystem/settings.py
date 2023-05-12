@@ -170,7 +170,7 @@ EMAIL_USE_TLS = True
 
 
 
-DOMAIN = 'https://blogapp-3f83.onrender.com/'
+DOMAIN = 'localhost'
 
 SITE_URL = 'https://blogapp-3f83.onrender.com/acknowledge/payment/'
 
