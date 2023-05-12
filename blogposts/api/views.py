@@ -23,13 +23,13 @@ from accounts import models as accounts_models
 class UserViewSet(ReadOnlyModelViewSet):
     serializer_class = serializers.UserSerializer
     queryset = accounts_models.UserAccount.objects.all()
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    # permission_classes = [IsAuthenticatedOrReadOnly]
 
 class PostViewSet(ModelViewSet):
     serializer_class = serializers.PostSerializer
     queryset = models.Post.objects.all()
     authentication_classes = [TokenAuthentication]
-    permission_classes = [permissions.IsAuthorOrReadOnly]
+    # permission_classes = [permissions.IsAuthorOrReadOnly]
     filter_backends = [DjangoFilterBackend,filters.SearchFilter,filters.OrderingFilter,]
     filterset_fields = ['user']
     search_fields = ['title','body']
@@ -40,7 +40,7 @@ class PostViewSet(ModelViewSet):
     
 class CommentViewSet(ModelViewSet):
     serializer_class  = serializers.CommentSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    # permission_classes = [IsAuthenticatedOrReadOnly]
     def get_queryset(self):
         queryset = models.Comment.objects.filter(post__id = self.kwargs['posts_pk'])
         return queryset
