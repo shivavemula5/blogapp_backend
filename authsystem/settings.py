@@ -208,4 +208,8 @@ REST_FRAMEWORK = {
 
 #Stripe Configurations
 
+# Heroku Postgresql Configuration
+db_from_env = dj_database.url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
+
 django_heroku.settings(locals())
