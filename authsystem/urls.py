@@ -7,7 +7,7 @@ urlpatterns = [
     
     path('admin/', admin.site.urls),
     path('__debug__/', include('debug_toolbar.urls')),
-    
+    path('',views.home,name='home'),    
     path('auth/',include('djoser.urls')),
     path('auth/',include('djoser.urls.authtoken')),
     path('api/',include('blogposts.urls')),

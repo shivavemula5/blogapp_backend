@@ -25,10 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv()
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
-DEBUG = os.environ.get('DEBUG') == 'True'
+DEBUG = os.environ.get('DEBUG') == 'False'
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
  
-ALLOWED_HOSTS = [" 127.0.0.1","blogapp-backend.herokuapp.com"]
+ALLOWED_HOSTS = [' 127.0.0.1','blogapp-backend.herokuapp.com']
 
 INTERNAL_IPS = [
     '127.0.0.1',
