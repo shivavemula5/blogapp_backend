@@ -8,7 +8,7 @@ from accounts.models import UserAccount
 from blogposts.models import Post , Comment , SavedPosts , LikedPosts 
 
 def home(request):
-    return HttpResponse("hii")
+    return HttpResponse("Welcome to the backend")
 
 def practiseQuery(request):
     pass
