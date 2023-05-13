@@ -28,11 +28,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG') == 'False'
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
  
-ALLOWED_HOSTS = ['127.0.0.1','blogapp-backend.herokuapp.com','blogapp-3f83.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1','blogapp-backend.herokuapp.com','blogapp-frontend-8los.onrender.com']
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-# CORS_ORIGIN_WHITELIST = ['https://blogapp-3f83.onrender.com']
 
 INTERNAL_IPS = [
     '127.0.0.1',
@@ -169,9 +168,9 @@ EMAIL_USE_TLS = True
 #        } 
 #   }
 
-DOMAIN = 'blogapp-3f83.onrender.com'
+DOMAIN = 'blogapp-frontend-8los.onrender.com'
 
-SITE_URL = 'https://blogapp-3f83.onrender.com/acknowledge/payment/'
+SITE_URL = 'https://blogapp-frontend-8los.onrender.com/acknowledge/payment/'
 
 
 #Djoser Configurations
